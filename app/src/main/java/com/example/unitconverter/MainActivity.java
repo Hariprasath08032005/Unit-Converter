@@ -72,7 +72,9 @@ public class MainActivity extends AppCompatActivity {
                 "Inches to Centimeters",
                 "Centimeters to Inches",
                 "Feet to Meters",
-                "Meters to Feet"
+                "Meters to Feet",
+                "Liter to Milliliter",
+                "Milliliter to Liter"
         };
 
         // Create adapter
@@ -134,6 +136,14 @@ public class MainActivity extends AppCompatActivity {
                 inputUnitLabel.setText("Meters (m)");
                 resultUnitLabel.setText("Feet (ft)");
                 break;
+            case "Liter to Milliliter":
+                inputUnitLabel.setText("Liters (l)");
+                resultUnitLabel.setText("Milliliters (ml)");
+                break;
+            case "Milliliter to Liter":
+                inputUnitLabel.setText("Milliliters (ml)");
+                resultUnitLabel.setText("Liters (l)");
+                break;
         }
     }
 
@@ -175,6 +185,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case "Meters to Feet":
                     result = input / 0.3048;
+                    break;
+                case "Milliliter to Liter":
+                    result = input / 1000;
+                    break;
+                case "Liter to Milliliter":
+                    result = input * 1000;
                     break;
             }
 
